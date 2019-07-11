@@ -10,16 +10,16 @@
     <h1>Hello there</h1>
     <div class="card search">
             <h1 class="search-headline">Artist Directory</h1>
-            <label class="search-label">Search <span *ngIf="name" [innerHTML]="'for: '+name"></span></label><br>
-            <input class="serach-input" type="text" #newArtist [value]="name" (input)="name=$event.target.value" (keyup.enter)="addArtist(newArtist.Value);newArtist.value=''" [value]="name">
-            <button class="btn" (click)="addArtist(newArtist.value);newArtist.value=''">Add</button>
+            <label class="search-label">Search <span *ngIf="query" [innerHTML]="'for: '+query"></span></label><br>
+            <input class="serach-input" type="text" #newArtist [(ngModel)]="query" placeholder="type in search here">
             <ul class="artistlist cf">
                 <li class="artistlist-item cf"
-                #artistContainer
-                (click)="onClick(item,artistContainer)"
                 *ngFor="let item of artists">
+                <img class = "artist-img" src="images/{{item.shortname}}_tn.jpg" alt="{{item.name}} photo" />
+                <div class="artist-info">
                     <h2 class="artist-name">{{item.name}}</h2>
-                    <h3 class="artist-reknown">{{item.school}}</h3>
+                    <h3 class="artist-reknown">{{item.reknown}}</h3>
+                </div>
                 </li>
             </ul>
         </div><!-- card search-->
