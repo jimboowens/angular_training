@@ -19,6 +19,23 @@ System.register(["@angular/core"], function(exports_1, context_1) {
             }],
         execute: function() {
             AppComponent = class AppComponent {
+                constructor() {
+                    this.name = "Jim Owens";
+                    this.artists = [
+                        {
+                            name: "Barot Bellingham",
+                            school: "Penn State"
+                        },
+                        {
+                            name: "Jonathan Ferrar",
+                            school: "Florida State"
+                        },
+                        {
+                            name: "Hillary Post",
+                            school: "UGA"
+                        },
+                    ];
+                }
             };
             AppComponent = __decorate([
                 core_1.Component({

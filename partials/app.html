@@ -1,0 +1,9 @@
+<div class="card search">
+    <h1 class="search-headline">Artist Directory</h1>
+    <label class="search-label">Search for: {{ name }}</label>
+    <ul class="artistlist cf">
+        <li class="artistlist-item cf" *ngFor="let item of artists">
+            <h2 class="artist-name">{{item}}</h2>
+        </li>
+    </ul>
+</div><!-- card search-->

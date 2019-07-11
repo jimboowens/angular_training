@@ -6,4 +6,26 @@ import { Component } from "@angular/core";
     styleUrls:['./app/component.app.css']
 })
 
-export class AppComponent{};
+export class AppComponent{
+    name:string;
+    artists:any;
+
+    constructor(){
+        this.name="Jim Owens"
+        this.artists=[
+            {
+                name:"Barot Bellingham",
+                school: "Penn State"
+            },
+            {
+                name: "Jonathan Ferrar",
+                school:"Florida State"
+            },
+            {
+                name: "Hillary Post",
+                school: "UGA"
+            },
+        ]
+    }
+
+};
