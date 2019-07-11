@@ -36,6 +36,21 @@ System.register(["@angular/core"], function(exports_1, context_1) {
                         },
                     ];
                 }
+                onClick(myItem, myContainer) {
+                    event.preventDefault;
+                    this.name = myItem.name;
+                    myContainer.style.backgroundColor = "#FECE4E";
+                    // console.log(myContainer);
+                }
+                addArtist(value) {
+                    console.log(value);
+                    if (value !== "") {
+                        this.artists.push({
+                            name: value,
+                            school: "Hard Knocks"
+                        });
+                    }
+                }
             };
             AppComponent = __decorate([
                 core_1.Component({

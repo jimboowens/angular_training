@@ -10,6 +10,23 @@ export class AppComponent{
     name:string;
     artists:any;
 
+    onClick(myItem, myContainer){
+        event.preventDefault;
+        this.name=myItem.name;
+        myContainer.style.backgroundColor="#FECE4E"
+        // console.log(myContainer);
+    }
+
+    addArtist(value){
+        console.log(value);
+        if (value!==""){
+            this.artists.push({
+                name:value,
+                school:"Hard Knocks"
+            })
+        }
+    }
+
     constructor(){
         this.name="Jim Owens"
         this.artists=[
