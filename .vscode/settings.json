@@ -1,0 +1,12 @@
+{
+    "terminal.integrated.shell.windows":"C:\\Program Files\\Git\\bin\\bash.exe",
+    "editor.wordWrap":"off",
+    "files.exclude": {
+        "**/node_modules": {},
+        "typings": {},
+        "**/*.map": {},
+        "**/*.js": {
+            "when": "$(basename).ts"
+        }
+    }
+}
